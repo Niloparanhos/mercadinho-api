@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercadinho</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>🛒 Mercadinho</h1>
+    <button id="btn-novo-produto" onclick="abrirModalCadastro()">
+
+      ➕ Novo Produto
+
+    </button>
+  </header>
+
+  <main>
+    <div id="produtos-container"></div>
+  </main>
+
+  <!-- Modal de edição -->
+
+  <div id="modal-editar" class="modal">
+
+    <div class="modal-conteudo">
+      <input type="hidden" id="modo" value="editar">
+      <h2>Editar Produto</h2>
+
+      <form id="form-editar">
+
+        <input type="hidden" id="editar-id">
+
+        <label>Nome</label>
+        <input type="text" id="editar-nome" required>
+
+        <label>Marca</label>
+        <input type="text" id="editar-marca" required>
+
+        <label>Descrição</label>
+        <textarea id="editar-descricao" required></textarea>
+
+        <label>Preço</label>
+        <input type="number" step="0.01" id="editar-preco" required>
+
+        <div class="modal-botoes">
+
+          <button type="submit">
+            Salvar Alterações
+          </button>
+
+          <button type="button" onclick="fecharModal()">
+            Cancelar
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
