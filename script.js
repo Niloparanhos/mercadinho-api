@@ -166,7 +166,7 @@ document
 
         alert('Produto cadastrado com sucesso!');
       } else {
-        await fetch(`${API_URL}/produto/${id}`, {
+        await fetch(`${API_URL}/produtos/${id}`, {
           method: 'PUT',
 
           headers: {
